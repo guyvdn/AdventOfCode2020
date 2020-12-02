@@ -37,10 +37,7 @@ namespace AdventOfCode2020
             {
                 get
                 {
-                    var found = 0;
-                    found += (Value[MinCount - 1] == RequiredCharacter) ? 1 : 0;
-                    found += (Value[MaxCount - 1] == RequiredCharacter) ? 1 : 0;
-                    return found == 1;
+                    return (Value[MinCount - 1] == RequiredCharacter) ^ (Value[MaxCount - 1] == RequiredCharacter);
                 }
             }
         }
