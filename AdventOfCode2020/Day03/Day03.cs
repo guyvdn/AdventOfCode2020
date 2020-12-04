@@ -3,7 +3,7 @@ using System.IO;
 using NUnit.Framework;
 using Shouldly;
 
-namespace AdventOfCode2020
+namespace AdventOfCode2020.Day03
 {
     public class Day03
     {
@@ -13,8 +13,8 @@ namespace AdventOfCode2020
         [OneTimeSetUp]
         public void SetUp()
         {
-            _testData = File.ReadAllText("Day03_testdata.txt").Split(Environment.NewLine);
-            _input = File.ReadAllText("Day03_input.txt").Split(Environment.NewLine);
+            _testData = File.ReadAllText("Data/Day03_testdata.txt").Split(Environment.NewLine);
+            _input = File.ReadAllText("Data/Day03_input.txt").Split(Environment.NewLine);
         }
 
         private int GetTreeCount(string[] grid, int moveRight, int moveDown)

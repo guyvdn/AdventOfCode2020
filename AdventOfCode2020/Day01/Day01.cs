@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using NUnit.Framework;
 
-namespace AdventOfCode2020
+namespace AdventOfCode2020.Day01
 {
     public class Day01
     {
@@ -12,7 +12,7 @@ namespace AdventOfCode2020
         [OneTimeSetUp]
         public void SetUp()
         {
-            var inputText = File.ReadAllText("Day01_input.txt");
+            var inputText = File.ReadAllText("Data/Day01_input.txt");
             var inputTextArray = inputText.Split(Environment.NewLine);
             _input = inputTextArray.Select(int.Parse).ToArray();
         }
