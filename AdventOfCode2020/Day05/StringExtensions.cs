@@ -2,7 +2,7 @@
 
 namespace AdventOfCode2020.Day05
 {
-    public static class RegexExtensions
+    public static class StringExtensions
     {
         public static string RegexReplace(this string value, string pattern, string replacement)
         {
