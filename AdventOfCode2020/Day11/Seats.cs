@@ -12,7 +12,7 @@ namespace AdventOfCode2020.Day11
         public Seats(IReadOnlyList<string> arrangement)
         {
             var height = arrangement.Count;
-            var width = arrangement.First().Length;
+            var width = arrangement[0].Length;
             var seats = new List<Seat>();
 
             for (var rowIndex = 0; rowIndex < height; rowIndex++)
@@ -63,7 +63,7 @@ namespace AdventOfCode2020.Day11
             return seats.Count(s => s.IsOccupied && s.IsAdjacentTo(seat));
         }
 
-        public static int GetVisibleAdjacentSeats(IEnumerable<Seat> seats, Seat seat)
+        public static int GetVisibleAdjacentSeats(Seat[] seats, Seat seat)
         {
             var count = 0;
 

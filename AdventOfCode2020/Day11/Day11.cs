@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using NUnit.Framework;
 using Shouldly;
@@ -15,8 +14,7 @@ namespace AdventOfCode2020.Day11
         [OneTimeSetUp]
         public void SetUp()
         {
-            _testData1 = File.ReadAllText("Data/Day11_testdata1.txt").Split(Environment.NewLine);
-            // _testData2 = File.ReadAllText("Data/Day11_testdata2.txt").Split(Environment.NewLine).Select(int.Parse).ToList();
+            _testData1 = File.ReadAllText("Data/Day11_testdata.txt").Split(Environment.NewLine);
             _input = File.ReadAllText("Data/Day11_input.txt").Split(Environment.NewLine);
         }
 
@@ -48,7 +46,7 @@ namespace AdventOfCode2020.Day11
         {
             var seat = new Seat('L', 2, 2);
 
-            Seats.GetVisibleAdjacentSeats(new List<Seat>{new('#', visibleSeatRow, visibleSeatColumn), new('L', invisibleSeatRow, invisibleSeatColumn)}, seat).ShouldBe(1);
+            Seats.GetVisibleAdjacentSeats(new Seat[]{new('#', visibleSeatRow, visibleSeatColumn), new('L', invisibleSeatRow, invisibleSeatColumn)}, seat).ShouldBe(1);
         }
 
 
