@@ -8,7 +8,6 @@ namespace AdventOfCode2020.Day11
     public class Day11
     {
         private string[] _testData1;
-        //private IReadOnlyCollection<int> _testData2;
         private string[] _input;
 
         [OneTimeSetUp]
