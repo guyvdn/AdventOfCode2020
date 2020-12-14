@@ -52,9 +52,8 @@ namespace AdventOfCode2020.Day13
 
         public long GetAnswerForContestWithSpeed()
         {
-            var firstBus = _buses[0];
             long departure = 0;
-            long increment = firstBus.Id;
+            long increment = _buses[0].Id;
 
             foreach (var bus in _buses)
             {
