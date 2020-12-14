@@ -35,9 +35,9 @@ namespace AdventOfCode2020.Day13
         public long GetAnswerForContestWithForce()
         {
             long answer = 0;
-            var firstBus = _buses.OrderBy(bus => bus.Id).Last();
-            long departure = -firstBus.Delay;
-            var increment = firstBus.Id;
+            var slowestBus = _buses.OrderBy(bus => bus.Id).Last();
+            long departure = -slowestBus.Delay;
+            var increment = slowestBus.Id;
 
             while (answer == 0)
             {
