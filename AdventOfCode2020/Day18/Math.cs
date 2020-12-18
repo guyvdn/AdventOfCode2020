@@ -26,8 +26,8 @@ namespace AdventOfCode2020.Day18
             while (input.Contains('('))
             {
                 var firstClosing = input.IndexOf(')');
-                var firstOpening = input.Substring(0, firstClosing).LastIndexOf('(');
-                var subSet = input.Substring(firstOpening, firstClosing - firstOpening + 1);
+                var lastOpening = input.Substring(0, firstClosing).LastIndexOf('(');
+                var subSet = input.Substring(lastOpening, firstClosing - lastOpening + 1);
                 var subResult = calculate(subSet.Substring(1, subSet.Length - 2)).ToString();
                 input = input.Replace(subSet, subResult);
             }
