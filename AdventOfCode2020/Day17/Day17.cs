@@ -8,7 +8,6 @@ namespace AdventOfCode2020.Day17
     public class Day17
     {
         private string[] _testData;
-        //private string[] _testData2;
         private string[] _input;
 
         [OneTimeSetUp]
