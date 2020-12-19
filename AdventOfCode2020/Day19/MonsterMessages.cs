@@ -53,7 +53,7 @@ namespace AdventOfCode2020.Day19
                 if (number == ruleNumber)
                     _recursionCount[number] = _recursionCount.ContainsKey(ruleNumber) ? _recursionCount[number] + 1 : 1;
                 
-                var regex = new Regex(Regex.Escape($" {number}"));
+                var regex = new Regex($" {number}");
                 rule = regex.Replace(rule, GetParsedRule(number), 1);
             }
         }
